@@ -1,6 +1,5 @@
 import Foundation
 import MLKitFaceDetection
-import MLKitVision
 import AVFoundation
 
 protocol FaceAnalyzerDelegate: AnyObject {
