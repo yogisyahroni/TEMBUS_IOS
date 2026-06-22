@@ -66,14 +66,13 @@ jobs:
           ruby clean_pbx.rb
 
 
-      - name: Build for Simulator (Debug)
+      - name: Build for Device (Debug)
         run: |
           xcodebuild build \
             -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.APP_SCHEME }}" \
-            -destination "generic/platform=iOS Simulator" \
+            -destination "generic/platform=iOS" \
             -configuration Debug \
-            EXCLUDED_ARCHS="arm64" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO
 
