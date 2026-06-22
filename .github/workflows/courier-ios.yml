@@ -66,17 +66,15 @@ jobs:
           ruby clean_pbx.rb
 
 
-      - name: Build for Device (Debug)
+      - name: Build for Simulator (Debug)
         run: |
           xcodebuild build \
             -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.APP_SCHEME }}" \
-            -destination "generic/platform=iOS" \
+            -destination "platform=iOS Simulator,name=iPhone SE (3rd generation),arch=x86_64" \
             -configuration Debug \
-            IPHONEOS_DEPLOYMENT_TARGET=17.0 \
             CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY=""
+            CODE_SIGNING_REQUIRED=NO
 
   # ──────────────────────────────────────────────
   # Phase 2: Archive & Upload to TestFlight
