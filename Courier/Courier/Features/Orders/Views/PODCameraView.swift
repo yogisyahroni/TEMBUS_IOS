@@ -12,7 +12,7 @@ struct PODCameraView: View {
             Color.black.ignoresSafeArea()
             
             if cameraManager.isAuthorized {
-                CameraPreviewView(session: cameraManager.session)
+                PODCameraPreview(session: cameraManager.session)
                     .ignoresSafeArea()
                 
                 // Watermark overlay
@@ -109,20 +109,20 @@ struct PODCameraView: View {
 }
 
 // MARK: - Camera Preview
-private struct CameraPreviewView: UIViewRepresentable {
+private struct PODCameraPreview: UIViewRepresentable {
     let session: AVCaptureSession
     
-    func makeUIView(context: Context) -> VideoPreviewView {
-        let view = VideoPreviewView()
+    func makeUIView(context: Context) -> PODVideoPreview {
+        let view = PODVideoPreview()
         view.videoPreviewLayer.session = session
         view.videoPreviewLayer.videoGravity = .resizeAspectFill
         return view
     }
     
-    func updateUIView(_ uiView: VideoPreviewView, context: Context) {}
+    func updateUIView(_ uiView: PODVideoPreview, context: Context) {}
 }
 
-private class VideoPreviewView: UIView {
+private class PODVideoPreview: UIView {
     override class var layerClass: AnyClass {
         return AVCaptureVideoPreviewLayer.self
     }

@@ -11,7 +11,7 @@ struct FaceLivenessView: View {
             
             // Camera Feed Background
             if let session = viewModel.captureSession {
-                CameraPreviewView(session: session)
+                FaceLivenessCameraPreview(session: session)
                     .ignoresSafeArea()
                     .mask(
                         // Dimming overlay with transparent circle
@@ -174,8 +174,8 @@ extension FaceLivenessViewModel: FaceAnalyzerDelegate {
 }
 
 // Custom View for rendering AVCaptureSession
-private struct CameraPreviewView: UIViewRepresentable {
-    class VideoPreviewView: UIView {
+private struct FaceLivenessCameraPreview: UIViewRepresentable {
+    class FaceLivenessVideoPreview: UIView {
         override class var layerClass: AnyClass {
             AVCaptureVideoPreviewLayer.self
         }
@@ -186,12 +186,12 @@ private struct CameraPreviewView: UIViewRepresentable {
     
     let session: AVCaptureSession
     
-    func makeUIView(context: Context) -> VideoPreviewView {
-        let view = VideoPreviewView()
+    func makeUIView(context: Context) -> FaceLivenessVideoPreview {
+        let view = FaceLivenessVideoPreview()
         view.videoPreviewLayer.session = session
         view.videoPreviewLayer.videoGravity = .resizeAspectFill
         return view
     }
     
-    func updateUIView(_ uiView: VideoPreviewView, context: Context) {}
+    func updateUIView(_ uiView: FaceLivenessVideoPreview, context: Context) {}
 }
