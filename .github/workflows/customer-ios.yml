@@ -61,7 +61,17 @@ jobs:
             -configuration Debug \
             SDKROOT=iphonesimulator \
             CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO
+            CODE_SIGNING_REQUIRED=NO \
+            ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS=NO \
+            ASSETCATALOG_COMPILER_SKIP_APP_STORE_DEPLOYMENT=YES \
+            2>&1 | tee /tmp/build_customer.log ; BUILD_EXIT=${PIPESTATUS[0]}
+          if [ $BUILD_EXIT -ne 0 ]; then
+            echo ""
+            echo "====== EXTRACTED BUILD ERRORS ======"
+            grep -n 'error:' /tmp/build_customer.log | grep -v '^Binary\|note:' | head -40
+            echo "====================================="
+          fi
+          exit $BUILD_EXIT
 
   # ──────────────────────────────────────────────
   # Phase 2: Archive & Upload to TestFlight
