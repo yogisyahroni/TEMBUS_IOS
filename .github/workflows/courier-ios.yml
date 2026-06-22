@@ -75,8 +75,6 @@ jobs:
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
-            ARCHS=x86_64 \
-            ONLY_ACTIVE_ARCH=NO \
             ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS=NO \
             ASSETCATALOG_COMPILER_SKIP_APP_STORE_DEPLOYMENT=YES \
             2>&1 | tee /tmp/build_courier.log ; BUILD_EXIT=${PIPESTATUS[0]}
