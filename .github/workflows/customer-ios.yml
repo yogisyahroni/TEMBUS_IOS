@@ -56,10 +56,8 @@ jobs:
           xcodebuild build \
             -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.APP_SCHEME }}" \
-            -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' \
             -configuration Debug \
-            SDKROOT=iphonesimulator \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS=NO \
