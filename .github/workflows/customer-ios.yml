@@ -57,8 +57,9 @@ jobs:
           xcodebuild build \
             -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.APP_SCHEME }}" \
-            -destination "generic/platform=iOS" \
+            -sdk iphonesimulator \
             -configuration Debug \
+            ONLY_ACTIVE_ARCH=NO \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             2>&1 | xcpretty --color
