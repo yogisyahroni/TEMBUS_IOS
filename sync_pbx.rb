@@ -16,15 +16,37 @@ def sync_project(project_path, target_name)
   # Find all physical Swift files (absolute paths)
   physical_files = Dir.glob("#{source_dir}/**/*.swift").map { |f| File.expand_path(f) }
   
-  # Get all files currently in the compile phase (absolute paths)
   compile_phase = target.source_build_phase
-  existing_paths = compile_phase.files.filter_map { |file| 
-    path = file.file_ref&.real_path&.to_s
-    path ? File.expand_path(path) : nil
-  }
   
+  # 1. Remove missing or invalid files from compile phase FIRST
+  compile_phase.files.to_a.each do |build_file|
+    file_ref = build_file.file_ref
+    if file_ref
+      path = file_ref.real_path.to_s
+      unless File.exist?(path)
+        puts "Removing deleted/invalid file reference: #{path}"
+        build_file.remove_from_project
+        file_ref.remove_from_project
+      end
+    end
+  end
+  
+  # 2. Get all valid files CURRENTLY in the compile phase
+  existing_paths = []
+  existing_basenames = []
+  
+  compile_phase.files.each do |file|
+    path = file.file_ref&.real_path&.to_s
+    if path
+      existing_paths << File.expand_path(path).downcase
+      existing_basenames << File.basename(path).downcase
+    end
+  end
+  
+  # 3. Add any physical files that are not in the compile phase
   physical_files.each do |absolute_path|
-    unless existing_paths.include?(absolute_path)
+    basename = File.basename(absolute_path).downcase
+    unless existing_paths.include?(absolute_path.downcase) || existing_basenames.include?(basename)
       # We need relative path to add to group
       file_path = Pathname.new(absolute_path).relative_path_from(Pathname.new(Dir.pwd)).to_s
       puts "Adding missing file: #{file_path}"
@@ -41,19 +63,6 @@ def sync_project(project_path, target_name)
     end
   end
   
-  # Remove missing files from compile phase
-  compile_phase.files.each do |build_file|
-    file_ref = build_file.file_ref
-    if file_ref
-      path = file_ref.real_path.to_s
-      unless File.exist?(path)
-        puts "Removing deleted file reference: #{path}"
-        build_file.remove_from_project
-        file_ref.remove_from_project
-      end
-    end
-  end
-
   project.save
   puts "Saved #{project_path}."
 end
