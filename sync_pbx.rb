@@ -56,9 +56,8 @@ def sync_project(project_path, target_name)
       
       # Find or create group
       group = project.main_group.find_subpath(File.join(target_name, group_path), true)
-      group.set_source_tree('<group>')
       
-      file_ref = group.new_reference(file_path)
+      file_ref = group.new_file(absolute_path)
       compile_phase.add_file_reference(file_ref)
     end
   end
