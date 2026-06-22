@@ -6,6 +6,7 @@ on:
     paths:
       - 'Customer/**'
       - '.github/workflows/customer-ios.yml'
+      - 'sync_pbx.rb'
   pull_request:
     branches: [main]
     paths:

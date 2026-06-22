@@ -6,6 +6,7 @@ on:
     paths:
       - 'Courier/**'
       - '.github/workflows/courier-ios.yml'
+      - 'sync_pbx.rb'
   pull_request:
     branches: [main]
     paths:
