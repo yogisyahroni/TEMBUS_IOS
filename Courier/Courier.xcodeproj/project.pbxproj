@@ -7,253 +7,211 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		109C48F7BE62065794ECBDB8 /* OrderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B614FB0A06B6FA763EAEF50 /* OrderEntity.swift */; };
-		115347E9868697E5D98743FE /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C4608AA01615F842FB412 /* WebRTCClient.swift */; };
-		2BF94B60B49197E549559702 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05494A4693DA08FD9A6F81F5 /* WebSocketManager.swift */; };
-		5C1D4BF68557A828D093DAF1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D04D83B557361ADC01FF59 /* ChatViewModel.swift */; };
-		69804530852EF911FBB199E2 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC214EA39084DBAF58FCF51E /* MapController.swift */; };
-		6AEC4A09A92F12DB6D7EAE28 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CB4AC7AC4F34B9F5353E5F /* CallView.swift */; };
-		8B494947B7F0BCA51DE688D4 /* Color+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEF458B8E382B9B82752D07 /* Color+App.swift */; };
-		95F4437B822784C98043D646 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF40888F6CB7FA8B91F289 /* ChatView.swift */; };
-		9D574FDBB8B3108FBEB181A3 /* EarningsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8354AA4B2AD44F2464CBCD5 /* EarningsView.swift */; };
-		'A001000000000001' = {isa = PBXBuildFile; fileRef = B001000000000001; };
-		'A001000000000002' = {isa = PBXBuildFile; fileRef = B001000000000002; };
-		'A001000000000003' = {isa = PBXBuildFile; fileRef = B001000000000003; };
-		'A001000000000004' = {isa = PBXBuildFile; fileRef = B001000000000004; };
-		'A001000000000005' = {isa = PBXBuildFile; fileRef = B001000000000005; };
-		'A001000000000006' = {isa = PBXBuildFile; fileRef = B001000000000006; };
-		'A001000000000007' = {isa = PBXBuildFile; fileRef = B001000000000007; };
-		'A001000000000008' = {isa = PBXBuildFile; fileRef = B001000000000008; };
-		'A001000000000009' = {isa = PBXBuildFile; fileRef = B001000000000009; };
-		'A00100000000000A' = {isa = PBXBuildFile; fileRef = B00100000000000A; };
-		'A00100000000000B' = {isa = PBXBuildFile; fileRef = B00100000000000B; };
-		'A00100000000000C' = {isa = PBXBuildFile; fileRef = B00100000000000C; };
-		'A00100000000000D' = {isa = PBXBuildFile; fileRef = B00100000000000D; };
-		'A00100000000000E' = {isa = PBXBuildFile; fileRef = B00100000000000E; };
-		'A00100000000000F' = {isa = PBXBuildFile; fileRef = B00100000000000F; };
-		'A001000000000010' = {isa = PBXBuildFile; fileRef = B001000000000010; };
-		'A001000000000011' = {isa = PBXBuildFile; fileRef = B001000000000011; };
-		'A001000000000012' = {isa = PBXBuildFile; fileRef = B001000000000012; };
-		B2A24E5D8833C04E5B54D916 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA41CDABF7C70F78139F4B /* CallManager.swift */; };
-		C7204F85A218008DB30375D0 /* FaceLivenessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6248099DC4069E8326662F /* FaceLivenessView.swift */; };
-		DBE44D7C927D1794A00D582C /* FaceAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D45A1A597C335FB608413 /* FaceAnalyzer.swift */; };
-		DC274CFD814FCDE53802E136 /* PODCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF4B018DA60D009967F6F8 /* PODCameraView.swift */; };
+		A001000000000001 /* CourierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000001 /* CourierApp.swift */; };
+		A001000000000002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000002 /* RootView.swift */; };
+		A001000000000003 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000003 /* MainTabView.swift */; };
+		A001000000000004 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000004 /* APIConfig.swift */; };
+		A001000000000005 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000005 /* APIClient.swift */; };
+		A001000000000006 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000006 /* Models.swift */; };
+		A001000000000007 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000007 /* TokenStorage.swift */; };
+		A001000000000008 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000008 /* AuthViewModel.swift */; };
+		A001000000000009 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000009 /* LoginView.swift */; };
+		A00100000000000A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000A /* HomeView.swift */; };
+		A00100000000000B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000B /* HomeViewModel.swift */; };
+		A00100000000000C /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000C /* OrderListView.swift */; };
+		A00100000000000D /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000D /* OrderDetailView.swift */; };
+		A00100000000000E /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000E /* OrderViewModel.swift */; };
+		A00100000000000F /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00100000000000F /* InboxView.swift */; };
+		A001000000000010 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000010 /* NotificationViewModel.swift */; };
+		A001000000000011 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001000000000011 /* ProfileView.swift */; };
+		A001000000000012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B001000000000012 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05494A4693DA08FD9A6F81F5 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebSocketManager.swift; path = Courier\Courier\Core\Network\WebSocketManager.swift; sourceTree = SOURCE_ROOT; };
-		08DF40888F6CB7FA8B91F289 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = Courier\Courier\Features\Orders\Views\ChatView.swift; sourceTree = SOURCE_ROOT; };
-		11CB4AC7AC4F34B9F5353E5F /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CallView.swift; path = Courier\Courier\Features\Orders\Views\CallView.swift; sourceTree = SOURCE_ROOT; };
-		22D04D83B557361ADC01FF59 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewModel.swift; path = Courier\Courier\Features\Orders\ViewModels\ChatViewModel.swift; sourceTree = SOURCE_ROOT; };
-		5FEF458B8E382B9B82752D07 /* Color+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+App.swift"; path = "Courier\\Courier\\Core\\Extensions\\Color+App.swift"; sourceTree = SOURCE_ROOT; };
-		6BAA41CDABF7C70F78139F4B /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CallManager.swift; path = Courier\Courier\Core\WebRTC\CallManager.swift; sourceTree = SOURCE_ROOT; };
-		701C4608AA01615F842FB412 /* WebRTCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebRTCClient.swift; path = Courier\Courier\Core\WebRTC\WebRTCClient.swift; sourceTree = SOURCE_ROOT; };
-		89AF4B018DA60D009967F6F8 /* PODCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PODCameraView.swift; path = Courier\Courier\Features\Orders\Views\PODCameraView.swift; sourceTree = SOURCE_ROOT; };
-		8B614FB0A06B6FA763EAEF50 /* OrderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderEntity.swift; path = Courier\Courier\Core\Storage\OrderEntity.swift; sourceTree = SOURCE_ROOT; };
-		8C8D45A1A597C335FB608413 /* FaceAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FaceAnalyzer.swift; path = Courier\Courier\Features\Auth\Utils\FaceAnalyzer.swift; sourceTree = SOURCE_ROOT; };
-		A8354AA4B2AD44F2464CBCD5 /* EarningsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EarningsView.swift; path = Courier\Courier\Features\Profile\Views\EarningsView.swift; sourceTree = SOURCE_ROOT; };
-		'B001000000000001' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierApp.swift; sourceTree = "<group>"; };
-		'B001000000000002' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		'B001000000000003' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		'B001000000000004' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
-		'B001000000000005' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		'B001000000000006' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		'B001000000000007' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
-		'B001000000000008' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		'B001000000000009' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		'B00100000000000A' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		'B00100000000000B' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		'B00100000000000C' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
-		'B00100000000000D' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
-		'B00100000000000E' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
-		'B00100000000000F' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
-		'B001000000000010' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
-		'B001000000000011' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		'B001000000000012' = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		'B001000000000013' = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		'C001000000000001' = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Courier.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC214EA39084DBAF58FCF51E /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = Courier\Courier\Features\Home\Utils\MapController.swift; sourceTree = SOURCE_ROOT; };
-		FD6248099DC4069E8326662F /* FaceLivenessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FaceLivenessView.swift; path = Courier\Courier\Features\Auth\Views\FaceLivenessView.swift; sourceTree = SOURCE_ROOT; };
+		B001000000000001 /* CourierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierApp.swift; sourceTree = "<group>"; };
+		B001000000000002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B001000000000003 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B001000000000004 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		B001000000000005 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B001000000000006 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B001000000000007 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		B001000000000008 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B001000000000009 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B00100000000000A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B00100000000000B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B00100000000000C /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
+		B00100000000000D /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		B00100000000000E /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		B00100000000000F /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		B001000000000010 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		B001000000000011 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B001000000000012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B001000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C001000000000001 /* Courier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Courier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		'D001000000000001' = {
+		D001000000000001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
-			files = (
-			);
+			files = ();
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		'E001000000000001' = {
+		E001000000000001 /* Courier */ = {
 			isa = PBXGroup;
 			children = (
-				E001000000000002,
-				E001000000000003,
-				E001000000000004,
-				E001000000000005,
+				E001000000000002 /* App */,
+				E001000000000003 /* Core */,
+				E001000000000004 /* Features */,
+				E001000000000005 /* Resources */,
 			);
 			path = Courier;
 			sourceTree = "<group>";
 		};
-		'E001000000000002' = {
+		E001000000000002 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B001000000000001,
-				B001000000000002,
-				B001000000000003,
+				B001000000000001 /* CourierApp.swift */,
+				B001000000000002 /* RootView.swift */,
+				B001000000000003 /* MainTabView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		'E001000000000003' = {
+		E001000000000003 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E001000000000006,
-				E001000000000007,
+				E001000000000006 /* Network */,
+				E001000000000007 /* Storage */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		'E001000000000004' = {
+		E001000000000006 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E001000000000008,
-				E001000000000009,
-				E00100000000000A,
-				E00100000000000B,
-				E00100000000000C,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		'E001000000000005' = {
-			isa = PBXGroup;
-			children = (
-				B001000000000012,
-				B001000000000013,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		'E001000000000006' = {
-			isa = PBXGroup;
-			children = (
-				B001000000000004,
-				B001000000000005,
-				B001000000000006,
+				B001000000000004 /* APIConfig.swift */,
+				B001000000000005 /* APIClient.swift */,
+				B001000000000006 /* Models.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		'E001000000000007' = {
+		E001000000000007 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				B001000000000007,
+				B001000000000007 /* TokenStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
 		};
-		'E001000000000008' = {
+		E001000000000004 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B001000000000008,
-				B001000000000009,
+				E001000000000008 /* Auth */,
+				E001000000000009 /* Home */,
+				E00100000000000A /* Orders */,
+				E00100000000000B /* Inbox */,
+				E00100000000000C /* Profile */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E001000000000008 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B001000000000008 /* AuthViewModel.swift */,
+				B001000000000009 /* LoginView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		'E001000000000009' = {
+		E001000000000009 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B00100000000000A,
-				B00100000000000B,
+				B00100000000000A /* HomeView.swift */,
+				B00100000000000B /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		'E00100000000000A' = {
+		E00100000000000A /* Orders */ = {
 			isa = PBXGroup;
 			children = (
-				B00100000000000C,
-				B00100000000000D,
-				B00100000000000E,
+				B00100000000000C /* OrderListView.swift */,
+				B00100000000000D /* OrderDetailView.swift */,
+				B00100000000000E /* OrderViewModel.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
 		};
-		'E00100000000000B' = {
+		E00100000000000B /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
-				B00100000000000F,
-				B001000000000010,
+				B00100000000000F /* InboxView.swift */,
+				B001000000000010 /* NotificationViewModel.swift */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
 		};
-		'E00100000000000C' = {
+		E00100000000000C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B001000000000011,
+				B001000000000011 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		'F001000000000000' = {
+		E001000000000005 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E001000000000001,
-				F001000000000001,
-				5FEF458B8E382B9B82752D07 /* Color+App.swift */,
-				05494A4693DA08FD9A6F81F5 /* WebSocketManager.swift */,
-				8B614FB0A06B6FA763EAEF50 /* OrderEntity.swift */,
-				6BAA41CDABF7C70F78139F4B /* CallManager.swift */,
-				701C4608AA01615F842FB412 /* WebRTCClient.swift */,
-				8C8D45A1A597C335FB608413 /* FaceAnalyzer.swift */,
-				FD6248099DC4069E8326662F /* FaceLivenessView.swift */,
-				CC214EA39084DBAF58FCF51E /* MapController.swift */,
-				22D04D83B557361ADC01FF59 /* ChatViewModel.swift */,
-				11CB4AC7AC4F34B9F5353E5F /* CallView.swift */,
-				08DF40888F6CB7FA8B91F289 /* ChatView.swift */,
-				89AF4B018DA60D009967F6F8 /* PODCameraView.swift */,
-				A8354AA4B2AD44F2464CBCD5 /* EarningsView.swift */,
+				B001000000000012 /* Assets.xcassets */,
+				B001000000000013 /* Info.plist */,
 			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		'F001000000000001' = {
+		F001000000000001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C001000000000001,
+				C001000000000001 /* Courier.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F001000000000000 = {
+			isa = PBXGroup;
+			children = (
+				E001000000000001 /* Courier */,
+				F001000000000001 /* Products */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		'G001000000000001' = {
+		G001000000000001 /* Courier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = H001000000000001;
+			buildConfigurationList = H001000000000001 /* Build configuration list for PBXNativeTarget "Courier" */;
 			buildPhases = (
-				I001000000000001,
-				D001000000000001,
-				J001000000000001,
+				I001000000000001 /* Sources */,
+				D001000000000001 /* Frameworks */,
+				J001000000000001 /* Resources */,
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
+			buildRules = ();
+			dependencies = ();
 			name = Courier;
 			productName = Courier;
-			productReference = C001000000000001;
+			productReference = C001000000000001 /* Courier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		'K001000000000001' = {
+		K001000000000001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
@@ -265,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = H001000000000002;
+			buildConfigurationList = H001000000000002 /* Build configuration list for PBXProject "Courier" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -274,68 +232,55 @@
 				Base,
 			);
 			mainGroup = F001000000000000;
-			productRefGroup = F001000000000001;
+			productRefGroup = F001000000000001 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				G001000000000001,
+				G001000000000001 /* Courier */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		'J001000000000001' = {
+		J001000000000001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A001000000000012,
+				A001000000000012 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		'I001000000000001' = {
+		I001000000000001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A001000000000001,
-				A001000000000002,
-				A001000000000003,
-				A001000000000004,
-				A001000000000005,
-				A001000000000006,
-				A001000000000007,
-				A001000000000008,
-				A001000000000009,
-				A00100000000000A,
-				A00100000000000B,
-				A00100000000000C,
-				A00100000000000D,
-				A00100000000000E,
-				A00100000000000F,
-				A001000000000010,
-				A001000000000011,
-				8B494947B7F0BCA51DE688D4 /* Color+App.swift in Sources */,
-				2BF94B60B49197E549559702 /* WebSocketManager.swift in Sources */,
-				109C48F7BE62065794ECBDB8 /* OrderEntity.swift in Sources */,
-				B2A24E5D8833C04E5B54D916 /* CallManager.swift in Sources */,
-				115347E9868697E5D98743FE /* WebRTCClient.swift in Sources */,
-				DBE44D7C927D1794A00D582C /* FaceAnalyzer.swift in Sources */,
-				C7204F85A218008DB30375D0 /* FaceLivenessView.swift in Sources */,
-				69804530852EF911FBB199E2 /* MapController.swift in Sources */,
-				5C1D4BF68557A828D093DAF1 /* ChatViewModel.swift in Sources */,
-				6AEC4A09A92F12DB6D7EAE28 /* CallView.swift in Sources */,
-				95F4437B822784C98043D646 /* ChatView.swift in Sources */,
-				DC274CFD814FCDE53802E136 /* PODCameraView.swift in Sources */,
-				9D574FDBB8B3108FBEB181A3 /* EarningsView.swift in Sources */,
+				A001000000000001 /* CourierApp.swift in Sources */,
+				A001000000000002 /* RootView.swift in Sources */,
+				A001000000000003 /* MainTabView.swift in Sources */,
+				A001000000000004 /* APIConfig.swift in Sources */,
+				A001000000000005 /* APIClient.swift in Sources */,
+				A001000000000006 /* Models.swift in Sources */,
+				A001000000000007 /* TokenStorage.swift in Sources */,
+				A001000000000008 /* AuthViewModel.swift in Sources */,
+				A001000000000009 /* LoginView.swift in Sources */,
+				A00100000000000A /* HomeView.swift in Sources */,
+				A00100000000000B /* HomeViewModel.swift in Sources */,
+				A00100000000000C /* OrderListView.swift in Sources */,
+				A00100000000000D /* OrderDetailView.swift in Sources */,
+				A00100000000000E /* OrderViewModel.swift in Sources */,
+				A00100000000000F /* InboxView.swift in Sources */,
+				A001000000000010 /* NotificationViewModel.swift in Sources */,
+				A001000000000011 /* ProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		'L001000000000001' = {
+		L001000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -397,7 +342,7 @@
 			};
 			name = Debug;
 		};
-		'L001000000000002' = {
+		L001000000000002 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -453,7 +398,7 @@
 			};
 			name = Release;
 		};
-		'L001000000000003' = {
+		L001000000000003 /* Debug - Target */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -475,7 +420,7 @@
 			};
 			name = Debug;
 		};
-		'L001000000000004' = {
+		L001000000000004 /* Release - Target */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -500,25 +445,26 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		'H001000000000001' = {
+		H001000000000001 /* Build configuration list for PBXNativeTarget "Courier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				L001000000000003,
-				L001000000000004,
+				L001000000000003 /* Debug */,
+				L001000000000004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		'H001000000000002' = {
+		H001000000000002 /* Build configuration list for PBXProject "Courier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				L001000000000001,
-				L001000000000002,
+				L001000000000001 /* Debug */,
+				L001000000000002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
 	};
-	rootObject = K001000000000001;
+	rootObject = K001000000000001 /* Project object */;
 }

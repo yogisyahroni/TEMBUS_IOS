@@ -40,8 +40,13 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: Install xcpretty
-        run: gem install xcpretty --no-document
+      - name: Install Dependencies (xcpretty & xcodeproj)
+        run: |
+          gem install xcpretty --no-document
+          gem install xcodeproj --no-document
+
+      - name: Sync Xcode Project Files
+        run: ruby sync_pbx.rb
 
       - name: Build for Simulator (Debug)
         run: |
