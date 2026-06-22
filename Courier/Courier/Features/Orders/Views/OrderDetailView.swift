@@ -4,6 +4,9 @@ struct OrderDetailView: View {
     let order: Order
     @StateObject private var viewModel = OrderDetailViewModel()
     @Environment(\.dismiss) private var dismiss
+    @State private var showPODCamera = false
+    @State private var showChat = false
+    @State private var showCall = false
 
     var body: some View {
         ScrollView {
@@ -35,6 +38,34 @@ struct OrderDetailView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+                
+                // Communication buttons
+                HStack(spacing: 16) {
+                    Button(action: {
+                        showChat = true
+                    }) {
+                        Label("Chat", systemImage: "message.fill")
+                            .font(.subheadline.bold())
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color("Primary").opacity(0.15))
+                            .foregroundStyle(Color("Primary"))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                    
+                    Button(action: {
+                        showCall = true
+                    }) {
+                        Label("Telepon", systemImage: "phone.fill")
+                            .font(.subheadline.bold())
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color("Primary").opacity(0.15))
+                            .foregroundStyle(Color("Primary"))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                }
+                .padding(.horizontal)
 
                 // Action buttons
                 VStack(spacing: 12) {
@@ -49,8 +80,8 @@ struct OrderDetailView: View {
                         }
                     }
                     if order.status.lowercased() == "in_transit" {
-                        ActionButton(title: "Konfirmasi Terkirim", icon: "checkmark.circle.fill", color: .green) {
-                            Task { await viewModel.updateStatus(orderId: order.orderId, newStatus: "delivered") }
+                        ActionButton(title: "Ambil Foto POD", icon: "camera.fill", color: .green) {
+                            showPODCamera = true
                         }
                     }
                 }
@@ -59,6 +90,19 @@ struct OrderDetailView: View {
         }
         .navigationTitle("Detail Order")
         .navigationBarTitleDisplayMode(.inline)
+        .fullScreenCover(isPresented: $showChat) {
+            ChatView(orderId: order.orderId)
+        }
+        .fullScreenCover(isPresented: $showCall) {
+            CallView(orderId: order.orderId)
+        }
+        .fullScreenCover(isPresented: $showPODCamera) {
+            PODCameraView { image in
+                // Handle captured image
+                // TODO: Upload POD
+                Task { await viewModel.updateStatus(orderId: order.orderId, newStatus: "delivered") }
+            }
+        }
     }
 }
 

@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var authViewModel: AuthViewModel
     @StateObject private var viewModel = HomeViewModel()
+    @StateObject private var mapController = MapController()
 
     var body: some View {
         NavigationStack {
@@ -48,6 +49,24 @@ struct HomeView: View {
                         StatCard(title: "Penghasilan", value: viewModel.todayEarningsFormatted, icon: "banknote.fill", color: Color("Primary"))
                     }
                     .padding(.horizontal)
+                    // Active Orders Map Placeholder
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Peta Pesanan Aktif")
+                            .font(.headline)
+                            .padding(.horizontal)
+                        
+                        ZStack {
+                            Rectangle()
+                                .fill(Color(.systemGray5))
+                                .frame(height: 250)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                            
+                            TomTomMapView(mapController: mapController)
+                                .frame(height: 250)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                        }
+                        .padding(.horizontal)
+                    }
                 }
                 .padding(.vertical)
             }

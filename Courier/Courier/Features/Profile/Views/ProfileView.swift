@@ -28,6 +28,22 @@ struct ProfileView: View {
                     }
                     .padding(.vertical, 4)
                 }
+                
+                // Earnings section
+                Section {
+                    NavigationLink {
+                        EarningsView()
+                    } label: {
+                        HStack {
+                            Label("Penghasilan", systemImage: "banknote.fill")
+                                .foregroundStyle(Color("Primary"))
+                            Spacer()
+                            Text("Detail")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
 
                 // Settings
                 Section("Pengaturan") {

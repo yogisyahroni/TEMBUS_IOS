@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import LocalAuthentication
 
 @MainActor
 final class AuthViewModel: ObservableObject {
@@ -35,6 +36,20 @@ final class AuthViewModel: ObservableObject {
         } catch {
             errorMessage = error.localizedDescription
         }
+    }
+    
+    func authenticateWithBiometrics(reason: String = "Otentikasi biometrik diperlukan untuk melanjutkan.") async -> Bool {
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            do {
+                return try await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason)
+            } catch {
+                return false
+            }
+        }
+        return false
     }
 
     func logout() {

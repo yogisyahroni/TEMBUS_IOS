@@ -5,8 +5,8 @@ struct CustomerMainTabView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            CustomerOrderView()
-                .tabItem { Label("Pesan", systemImage: "plus.circle.fill") }
+            CustomerHomeView()
+                .tabItem { Label("Beranda", systemImage: "house.fill") }
                 .tag(0)
 
             CustomerOrderHistoryView()

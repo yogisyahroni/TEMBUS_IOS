@@ -69,6 +69,15 @@ final class CustomerOrderHistoryViewModel: ObservableObject {
     func fetchOrders() async {
         isLoading = true
         defer { isLoading = false }
-        // TODO: fetch from API
+        
+        do {
+            let response: [CustomerOrder] = try await NetworkManager.shared.request(
+                APIEndpoint.baseURL + "/customer/orders",
+                method: "GET"
+            )
+            self.orders = response
+        } catch {
+            print("Failed to fetch orders: \(error)")
+        }
     }
 }

@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct CourierApp: App {
@@ -9,5 +10,6 @@ struct CourierApp: App {
             RootView()
                 .environmentObject(authViewModel)
         }
+        .modelContainer(for: [OrderEntity.self, CourierOrderPackageEntity.self])
     }
 }

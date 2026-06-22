@@ -9,13 +9,10 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background gradient
-                LinearGradient(
-                    colors: [Color("PrimaryDark"), Color("Primary")],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
+                Image("bg_courier_login")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
 
                 VStack(spacing: 32) {
                     // Logo area

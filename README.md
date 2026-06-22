@@ -97,3 +97,31 @@ open Customer/Customer.xcodeproj
 ```
 
 > **Catatan:** Set `DEVELOPMENT_TEAM` di Build Settings dengan Apple Developer Team ID kamu sebelum build ke device.
+
+## Menginstal Dependensi Swift Package Manager (SPM)
+
+Aplikasi Courier menggunakan *3rd-party SDK* berikut yang harus di-*resolve* via Xcode:
+- `Socket.IO-Client-Swift` (Real-time events).
+- `StreamWebRTC` (Audio Calling).
+- `TomTomSDK` (Maps & Routing).
+- `GoogleMLKit/FaceDetection` (Vision Liveness).
+
+**Cara Instalasi:**
+1. Buka `Courier/Courier.xcodeproj` menggunakan Xcode.
+2. Pada menu bar, pilih **File** > **Add Package Dependencies...**
+3. Masukkan URL package berikut:
+   - `https://github.com/socketio/socket.io-client-swift`
+   - `https://github.com/tomtom-international/tomtom-sdk-spm-ios.git`
+- Module: `TomTomSDKMapDisplay`, `TomTomSDKRouting`
+
+### Google Sign-In SDK (Khusus Aplikasi Customer)
+- **URL**: `https://github.com/google/GoogleSignIn-iOS.git`
+- **Dependency Rule**: Up to Next Major Version (7.0.0 atau terbaru)
+- **Modules**:
+  - `GoogleSignIn`
+  - `GoogleSignInSwift`
+
+---
+
+## 3. Menjalankan Aplikasi
+4. Klik **Add Package** dan pastikan semua library terpasang di *Target Courier*.

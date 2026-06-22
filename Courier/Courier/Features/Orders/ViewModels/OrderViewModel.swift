@@ -29,6 +29,20 @@ final class OrderDetailViewModel: ObservableObject {
     func updateStatus(orderId: String, newStatus: String) async {
         isUpdating = true
         defer { isUpdating = false }
-        // TODO: Call update status API
+        do {
+            struct UpdateStatusRequest: Encodable {
+                let status: String
+            }
+            let _: EmptyResponse = try await apiClient.request(
+                .updateOrderStatus(id: orderId),
+                method: .put,
+                body: UpdateStatusRequest(status: newStatus)
+            )
+        } catch {
+            errorMessage = error.localizedDescription
+        }
     }
 }
+
+// Helper struct for responses with empty data
+struct EmptyResponse: Decodable {}

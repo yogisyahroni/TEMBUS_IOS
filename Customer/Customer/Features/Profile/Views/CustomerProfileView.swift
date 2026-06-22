@@ -24,7 +24,11 @@ struct CustomerProfileView: View {
                 }
 
                 Section("Akun") {
-                    Label("Alamat Tersimpan", systemImage: "mappin.circle.fill")
+                    NavigationLink {
+                        CustomerAddressBookView()
+                    } label: {
+                        Label("Alamat Tersimpan", systemImage: "mappin.circle.fill")
+                    }
                     Label("Metode Pembayaran", systemImage: "creditcard.fill")
                     Label("Notifikasi", systemImage: "bell.fill")
                 }

@@ -1,10 +1,8 @@
 import SwiftUI
+import GoogleSignInSwift
 
 struct CustomerLoginView: View {
     @EnvironmentObject private var authViewModel: CustomerAuthViewModel
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var isPasswordVisible: Bool = false
 
     var body: some View {
         ZStack {
@@ -36,81 +34,53 @@ struct CustomerLoginView: View {
                 VStack(spacing: 20) {
                     Text("Masuk ke Akun")
                         .font(.title2.bold())
-                        .frame(maxWidth: .infinity, alignment: .leading)
-
-                    // Email
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("Email")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.secondary)
-                        HStack {
-                            Image(systemName: "envelope.fill")
-                                .foregroundStyle(Color("CustomerPrimary"))
-                            TextField("email@kamu.com", text: $email)
-                                .keyboardType(.emailAddress)
-                                .autocorrectionDisabled()
-                                .textInputAutocapitalization(.never)
-                        }
-                        .padding()
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                    }
-
-                    // Password
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("Password")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.secondary)
-                        HStack {
-                            Image(systemName: "lock.fill")
-                                .foregroundStyle(Color("CustomerPrimary"))
-                            if isPasswordVisible {
-                                TextField("Masukkan password", text: $password)
-                            } else {
-                                SecureField("Masukkan password", text: $password)
-                            }
-                            Button { isPasswordVisible.toggle() } label: {
-                                Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                        .padding()
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                    }
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.bottom, 8)
 
                     if let error = authViewModel.errorMessage {
                         Label(error, systemImage: "exclamationmark.triangle.fill")
                             .font(.caption).foregroundStyle(.red)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .multilineTextAlignment(.center)
                     }
 
-                    Button {
-                        Task { await authViewModel.login(email: email, password: password) }
-                    } label: {
-                        HStack {
-                            if authViewModel.isLoading {
-                                ProgressView().tint(.white)
-                            } else {
-                                Text("Masuk").font(.body.bold())
+                    if authViewModel.isLoading {
+                        ProgressView().tint(Color("CustomerPrimary"))
+                            .padding()
+                    } else {
+                        GoogleSignInButton(scheme: .light, style: .wide, state: .normal) {
+                            Task {
+                                await authViewModel.loginWithGoogle()
                             }
                         }
-                        .frame(maxWidth: .infinity).padding()
-                        .background(Color("CustomerPrimary"))
-                        .foregroundStyle(.white)
+                        .frame(height: 50)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
-                    .disabled(authViewModel.isLoading || email.isEmpty || password.isEmpty)
-                    .opacity((email.isEmpty || password.isEmpty) ? 0.6 : 1)
 
-                    Button("Belum punya akun? Daftar") { /* TODO: navigate to register */ }
-                        .font(.subheadline).foregroundStyle(Color("CustomerPrimary"))
+                    Text("Dengan masuk, Anda menyetujui Syarat dan Ketentuan layanan.")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 8)
                 }
                 .padding(24)
                 .background(Color(.systemBackground))
                 .clipShape(RoundedRectangle(cornerRadius: 24))
                 .shadow(color: .black.opacity(0.15), radius: 20, y: -5)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 40)
             }
         }
+        .sheet(isPresented: $authViewModel.isOTPRequired) {
+            CustomerOTPView()
+                .environmentObject(authViewModel)
+                // Disable interactive dismiss so they must verify or cancel properly
+                .interactiveDismissDisabled()
+        }
     }
+}
+
+#Preview {
+    CustomerLoginView()
+        .environmentObject(CustomerAuthViewModel())
 }
