@@ -98,7 +98,7 @@ struct EarningRow: View {
             Spacer()
             Text(value)
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(isPositive ? .primary : .red)
+                .foregroundStyle(isPositive ? Color.primary : Color.red)
         }
         .padding(.vertical, 12)
     }

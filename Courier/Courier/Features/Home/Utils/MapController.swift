@@ -29,12 +29,12 @@ class MapController: ObservableObject {
     
     func addMarker(at coordinate: CLLocationCoordinate2D) {
         let markerOptions = MarkerOptions(coordinate: coordinate)
-        _ = try? mapView?.markerManager.addMarker(options: markerOptions)
+        // _ = try? mapView?.markerManager.addMarker(options: markerOptions)
     }
     
     func centerMap(on coordinate: CLLocationCoordinate2D) {
         let cameraUpdate = CameraUpdate(position: coordinate, zoom: 14.0)
-        mapView?.camera.move(cameraUpdate: cameraUpdate)
+        // mapView?.camera.move(cameraUpdate: cameraUpdate)
     }
     
     func drawRoute(from origin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {

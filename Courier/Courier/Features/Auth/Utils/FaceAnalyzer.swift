@@ -1,5 +1,6 @@
 import Foundation
 import MLKitFaceDetection
+import MLKitVision
 import AVFoundation
 import UIKit
 

@@ -18,7 +18,7 @@ class ChatViewModel: ObservableObject {
                 
                 let msg = ChatMessage(
                     text: payload.text,
-                    isFromCurrentUser: payload.sender_id == TokenStorage.shared.courierId, // Assuming we have courierId
+                    isFromCurrentUser: payload.sender_id == TokenStorage.shared.userId, // Assuming we have userId
                     timestamp: payload.created_at
                 )
                 
@@ -72,7 +72,7 @@ class ChatViewModel: ObservableObject {
             self.messages = response.chats.map { chat in
                 ChatMessage(
                     text: chat.text,
-                    isFromCurrentUser: chat.sender_id == TokenStorage.shared.courierId, // Optional: adjust check based on actual sender_type or ID
+                    isFromCurrentUser: chat.sender_id == TokenStorage.shared.userId, // Optional: adjust check based on actual sender_type or ID
                     timestamp: chat.created_at
                 )
             }

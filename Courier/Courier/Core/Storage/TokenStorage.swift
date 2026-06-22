@@ -7,6 +7,7 @@ final class TokenStorage {
 
     private let accessTokenKey  = "tembus.courier.accessToken"
     private let refreshTokenKey = "tembus.courier.refreshToken"
+    private let userIdKey       = "tembus.courier.userId"
 
     private init() {}
 
@@ -34,9 +35,22 @@ final class TokenStorage {
         }
     }
 
+    // MARK: - User ID
+    var userId: String? {
+        get { retrieve(key: userIdKey) }
+        set {
+            if let value = newValue {
+                save(key: userIdKey, value: value)
+            } else {
+                delete(key: userIdKey)
+            }
+        }
+    }
+
     func clearAll() {
         delete(key: accessTokenKey)
         delete(key: refreshTokenKey)
+        delete(key: userIdKey)
     }
 
     // MARK: - Keychain Operations
