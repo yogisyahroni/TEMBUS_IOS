@@ -7,185 +7,207 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A002000000000001 /* CustomerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000001 /* CustomerApp.swift */; };
-		A002000000000002 /* CustomerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000002 /* CustomerRootView.swift */; };
-		A002000000000003 /* CustomerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000003 /* CustomerMainTabView.swift */; };
-		A002000000000004 /* CustomerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000004 /* CustomerModels.swift */; };
-		A002000000000005 /* CustomerTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000005 /* CustomerTokenStorage.swift */; };
-		A002000000000006 /* CustomerAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000006 /* CustomerAuthViewModel.swift */; };
-		A002000000000007 /* CustomerLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000007 /* CustomerLoginView.swift */; };
-		A002000000000008 /* CustomerOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000008 /* CustomerOrderView.swift */; };
-		A002000000000009 /* CustomerOrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000009 /* CustomerOrderHistoryView.swift */; };
-		A00200000000000A /* CustomerTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000A /* CustomerTrackingView.swift */; };
-		A00200000000000B /* CustomerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000B /* CustomerProfileView.swift */; };
-		A00200000000000C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00200000000000C /* Assets.xcassets */; };
+		34AB41E4AC3253CF926A2EE9 /* CustomerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F45DA9F300C213D3138B6 /* CustomerHomeView.swift */; };
+		3D074CB9AF27C58717E355B5 /* CustomerAddressBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53084619893E47AB87950E42 /* CustomerAddressBookView.swift */; };
+		4A354926B787A5371148ED93 /* CustomerCreateOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC444D628CFFDD623E02856D /* CustomerCreateOrderView.swift */; };
+		67394BE2B39F421DFA976593 /* CustomerChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEB4AD7879E4550C50ED520 /* CustomerChatView.swift */; };
+		845344A184D4918EC3B78BB1 /* CustomerChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30141618C2DB6259679AFBC /* CustomerChatViewModel.swift */; };
+		'A002000000000001' = {isa = PBXBuildFile; fileRef = B002000000000001; };
+		'A002000000000002' = {isa = PBXBuildFile; fileRef = B002000000000002; };
+		'A002000000000003' = {isa = PBXBuildFile; fileRef = B002000000000003; };
+		'A002000000000004' = {isa = PBXBuildFile; fileRef = B002000000000004; };
+		'A002000000000005' = {isa = PBXBuildFile; fileRef = B002000000000005; };
+		'A002000000000006' = {isa = PBXBuildFile; fileRef = B002000000000006; };
+		'A002000000000007' = {isa = PBXBuildFile; fileRef = B002000000000007; };
+		'A002000000000009' = {isa = PBXBuildFile; fileRef = B002000000000009; };
+		'A00200000000000A' = {isa = PBXBuildFile; fileRef = B00200000000000A; };
+		'A00200000000000B' = {isa = PBXBuildFile; fileRef = B00200000000000B; };
+		'A00200000000000C' = {isa = PBXBuildFile; fileRef = B00200000000000C; };
+		A39048A8B5E3F178235DE738 /* CustomerCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF4F5EAA547C954C9BA7C5 /* CustomerCallView.swift */; };
+		CBA947DFBB03B6A97E9002AF /* CustomerOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C42029DE39A136899514E /* CustomerOTPView.swift */; };
+		CFC24140B213CA9E13178968 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C494B12AC067096F4F20CE8 /* NetworkManager.swift */; };
+		D719477EBAA3EAAA23A7E7D0 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77334CB393D048B1ED5D7551 /* WebSocketManager.swift */; };
+		E3A64D4383D63BAA6774D437 /* CustomerPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE4D0EBEA6798E90190DB0 /* CustomerPaymentView.swift */; };
+		FA2B4AAA972338977582FECD /* CustomerLocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8347C28A0C9D52BF8694E3 /* CustomerLocationPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B002000000000001 /* CustomerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerApp.swift; sourceTree = "<group>"; };
-		B002000000000002 /* CustomerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRootView.swift; sourceTree = "<group>"; };
-		B002000000000003 /* CustomerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMainTabView.swift; sourceTree = "<group>"; };
-		B002000000000004 /* CustomerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModels.swift; sourceTree = "<group>"; };
-		B002000000000005 /* CustomerTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTokenStorage.swift; sourceTree = "<group>"; };
-		B002000000000006 /* CustomerAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAuthViewModel.swift; sourceTree = "<group>"; };
-		B002000000000007 /* CustomerLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLoginView.swift; sourceTree = "<group>"; };
-		B002000000000008 /* CustomerOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderView.swift; sourceTree = "<group>"; };
-		B002000000000009 /* CustomerOrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderHistoryView.swift; sourceTree = "<group>"; };
-		B00200000000000A /* CustomerTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTrackingView.swift; sourceTree = "<group>"; };
-		B00200000000000B /* CustomerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileView.swift; sourceTree = "<group>"; };
-		B00200000000000C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B00200000000000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C002000000000001 /* Customer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C494B12AC067096F4F20CE8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Customer\Customer\Core\Network\NetworkManager.swift; sourceTree = SOURCE_ROOT; };
+		13AE4D0EBEA6798E90190DB0 /* CustomerPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerPaymentView.swift; path = Customer\Customer\Features\Orders\Views\CustomerPaymentView.swift; sourceTree = SOURCE_ROOT; };
+		1ACF4F5EAA547C954C9BA7C5 /* CustomerCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerCallView.swift; path = Customer\Customer\Features\Tracking\Views\CustomerCallView.swift; sourceTree = SOURCE_ROOT; };
+		53084619893E47AB87950E42 /* CustomerAddressBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerAddressBookView.swift; path = Customer\Customer\Features\Profile\Views\CustomerAddressBookView.swift; sourceTree = SOURCE_ROOT; };
+		77334CB393D048B1ED5D7551 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebSocketManager.swift; path = Customer\Customer\Core\Network\WebSocketManager.swift; sourceTree = SOURCE_ROOT; };
+		7EEB4AD7879E4550C50ED520 /* CustomerChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerChatView.swift; path = Customer\Customer\Features\Tracking\Views\CustomerChatView.swift; sourceTree = SOURCE_ROOT; };
+		AC444D628CFFDD623E02856D /* CustomerCreateOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerCreateOrderView.swift; path = Customer\Customer\Features\Orders\Views\CustomerCreateOrderView.swift; sourceTree = SOURCE_ROOT; };
+		'B002000000000001' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerApp.swift; sourceTree = "<group>"; };
+		'B002000000000002' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRootView.swift; sourceTree = "<group>"; };
+		'B002000000000003' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMainTabView.swift; sourceTree = "<group>"; };
+		'B002000000000004' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModels.swift; sourceTree = "<group>"; };
+		'B002000000000005' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTokenStorage.swift; sourceTree = "<group>"; };
+		'B002000000000006' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAuthViewModel.swift; sourceTree = "<group>"; };
+		'B002000000000007' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLoginView.swift; sourceTree = "<group>"; };
+		'B002000000000009' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderHistoryView.swift; sourceTree = "<group>"; };
+		'B00200000000000A' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTrackingView.swift; sourceTree = "<group>"; };
+		'B00200000000000B' = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileView.swift; sourceTree = "<group>"; };
+		'B00200000000000C' = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		'B00200000000000D' = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B30141618C2DB6259679AFBC /* CustomerChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerChatViewModel.swift; path = Customer\Customer\Features\Tracking\ViewModels\CustomerChatViewModel.swift; sourceTree = SOURCE_ROOT; };
+		BD8347C28A0C9D52BF8694E3 /* CustomerLocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerLocationPickerView.swift; path = Customer\Customer\Features\Orders\Views\CustomerLocationPickerView.swift; sourceTree = SOURCE_ROOT; };
+		'C002000000000001' = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA8C42029DE39A136899514E /* CustomerOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerOTPView.swift; path = Customer\Customer\Features\Auth\Views\CustomerOTPView.swift; sourceTree = SOURCE_ROOT; };
+		DE0F45DA9F300C213D3138B6 /* CustomerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomerHomeView.swift; path = Customer\Customer\Features\Orders\Views\CustomerHomeView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		D002000000000001 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = ();
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		E002000000000001 /* Customer */ = {
+		'E002000000000001' = {
 			isa = PBXGroup;
 			children = (
-				E002000000000002 /* App */,
-				E002000000000003 /* Core */,
-				E002000000000004 /* Features */,
-				E002000000000005 /* Resources */,
+				E002000000000002,
+				E002000000000003,
+				E002000000000004,
+				E002000000000005,
 			);
 			path = Customer;
 			sourceTree = "<group>";
 		};
-		E002000000000002 /* App */ = {
+		'E002000000000002' = {
 			isa = PBXGroup;
 			children = (
-				B002000000000001 /* CustomerApp.swift */,
-				B002000000000002 /* CustomerRootView.swift */,
-				B002000000000003 /* CustomerMainTabView.swift */,
+				B002000000000001,
+				B002000000000002,
+				B002000000000003,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		E002000000000003 /* Core */ = {
+		'E002000000000003' = {
 			isa = PBXGroup;
 			children = (
-				E002000000000006 /* Network */,
-				E002000000000007 /* Storage */,
+				E002000000000006,
+				E002000000000007,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		E002000000000006 /* Network */ = {
+		'E002000000000004' = {
 			isa = PBXGroup;
 			children = (
-				B002000000000004 /* CustomerModels.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		E002000000000007 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				B002000000000005 /* CustomerTokenStorage.swift */,
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
-		E002000000000004 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				E002000000000008 /* Auth */,
-				E002000000000009 /* Orders */,
-				E00200000000000A /* Tracking */,
-				E00200000000000B /* Profile */,
+				E002000000000008,
+				E002000000000009,
+				E00200000000000A,
+				E00200000000000B,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		E002000000000008 /* Auth */ = {
+		'E002000000000005' = {
 			isa = PBXGroup;
 			children = (
-				B002000000000006 /* CustomerAuthViewModel.swift */,
-				B002000000000007 /* CustomerLoginView.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		E002000000000009 /* Orders */ = {
-			isa = PBXGroup;
-			children = (
-				B002000000000008 /* CustomerOrderView.swift */,
-				B002000000000009 /* CustomerOrderHistoryView.swift */,
-			);
-			path = Orders;
-			sourceTree = "<group>";
-		};
-		E00200000000000A /* Tracking */ = {
-			isa = PBXGroup;
-			children = (
-				B00200000000000A /* CustomerTrackingView.swift */,
-			);
-			path = Tracking;
-			sourceTree = "<group>";
-		};
-		E00200000000000B /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				B00200000000000B /* CustomerProfileView.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		E002000000000005 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B00200000000000C /* Assets.xcassets */,
-				B00200000000000D /* Info.plist */,
+				B00200000000000C,
+				B00200000000000D,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F002000000000001 /* Products */ = {
+		'E002000000000006' = {
 			isa = PBXGroup;
 			children = (
-				C002000000000001 /* Customer.app */,
+				B002000000000004,
 			);
-			name = Products;
+			path = Network;
 			sourceTree = "<group>";
 		};
-		F002000000000000 = {
+		'E002000000000007' = {
 			isa = PBXGroup;
 			children = (
-				E002000000000001 /* Customer */,
-				F002000000000001 /* Products */,
+				B002000000000005,
 			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		'E002000000000008' = {
+			isa = PBXGroup;
+			children = (
+				B002000000000006,
+				B002000000000007,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		'E002000000000009' = {
+			isa = PBXGroup;
+			children = (
+				B002000000000009,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		'E00200000000000A' = {
+			isa = PBXGroup;
+			children = (
+				B00200000000000A,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		'E00200000000000B' = {
+			isa = PBXGroup;
+			children = (
+				B00200000000000B,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		'F002000000000000' = {
+			isa = PBXGroup;
+			children = (
+				E002000000000001,
+				F002000000000001,
+				0C494B12AC067096F4F20CE8 /* NetworkManager.swift */,
+				77334CB393D048B1ED5D7551 /* WebSocketManager.swift */,
+				CA8C42029DE39A136899514E /* CustomerOTPView.swift */,
+				AC444D628CFFDD623E02856D /* CustomerCreateOrderView.swift */,
+				DE0F45DA9F300C213D3138B6 /* CustomerHomeView.swift */,
+				BD8347C28A0C9D52BF8694E3 /* CustomerLocationPickerView.swift */,
+				13AE4D0EBEA6798E90190DB0 /* CustomerPaymentView.swift */,
+				53084619893E47AB87950E42 /* CustomerAddressBookView.swift */,
+				B30141618C2DB6259679AFBC /* CustomerChatViewModel.swift */,
+				1ACF4F5EAA547C954C9BA7C5 /* CustomerCallView.swift */,
+				7EEB4AD7879E4550C50ED520 /* CustomerChatView.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		'F002000000000001' = {
+			isa = PBXGroup;
+			children = (
+				C002000000000001,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		G002000000000001 /* Customer */ = {
+		'G002000000000001' = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = H002000000000001 /* Build configuration list for PBXNativeTarget "Customer" */;
+			buildConfigurationList = H002000000000001;
 			buildPhases = (
-				I002000000000001 /* Sources */,
-				D002000000000001 /* Frameworks */,
-				J002000000000001 /* Resources */,
+				I002000000000001,
+				J002000000000001,
 			);
-			buildRules = ();
-			dependencies = ();
+			buildRules = (
+			);
+			dependencies = (
+			);
 			name = Customer;
 			productName = Customer;
-			productReference = C002000000000001 /* Customer.app */;
+			productReference = C002000000000001;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		K002000000000001 /* Project object */ = {
+		'K002000000000001' = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
@@ -197,55 +219,68 @@
 					};
 				};
 			};
-			buildConfigurationList = H002000000000002 /* Build configuration list for PBXProject "Customer" */;
+			buildConfigurationList = H002000000000002;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			knownRegions = (en, Base);
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = F002000000000000;
-			productRefGroup = F002000000000001 /* Products */;
+			productRefGroup = F002000000000001;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				G002000000000001 /* Customer */,
+				G002000000000001,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		J002000000000001 /* Resources */ = {
+		'J002000000000001' = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A00200000000000C /* Assets.xcassets in Resources */,
+				A00200000000000C,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		I002000000000001 /* Sources */ = {
+		'I002000000000001' = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A002000000000001 /* CustomerApp.swift in Sources */,
-				A002000000000002 /* CustomerRootView.swift in Sources */,
-				A002000000000003 /* CustomerMainTabView.swift in Sources */,
-				A002000000000004 /* CustomerModels.swift in Sources */,
-				A002000000000005 /* CustomerTokenStorage.swift in Sources */,
-				A002000000000006 /* CustomerAuthViewModel.swift in Sources */,
-				A002000000000007 /* CustomerLoginView.swift in Sources */,
-				A002000000000008 /* CustomerOrderView.swift in Sources */,
-				A002000000000009 /* CustomerOrderHistoryView.swift in Sources */,
-				A00200000000000A /* CustomerTrackingView.swift in Sources */,
-				A00200000000000B /* CustomerProfileView.swift in Sources */,
+				A002000000000001,
+				A002000000000002,
+				A002000000000003,
+				A002000000000004,
+				A002000000000005,
+				A002000000000006,
+				A002000000000007,
+				A002000000000009,
+				A00200000000000A,
+				A00200000000000B,
+				CFC24140B213CA9E13178968 /* NetworkManager.swift in Sources */,
+				D719477EBAA3EAAA23A7E7D0 /* WebSocketManager.swift in Sources */,
+				CBA947DFBB03B6A97E9002AF /* CustomerOTPView.swift in Sources */,
+				4A354926B787A5371148ED93 /* CustomerCreateOrderView.swift in Sources */,
+				34AB41E4AC3253CF926A2EE9 /* CustomerHomeView.swift in Sources */,
+				FA2B4AAA972338977582FECD /* CustomerLocationPickerView.swift in Sources */,
+				E3A64D4383D63BAA6774D437 /* CustomerPaymentView.swift in Sources */,
+				3D074CB9AF27C58717E355B5 /* CustomerAddressBookView.swift in Sources */,
+				845344A184D4918EC3B78BB1 /* CustomerChatViewModel.swift in Sources */,
+				A39048A8B5E3F178235DE738 /* CustomerCallView.swift in Sources */,
+				67394BE2B39F421DFA976593 /* CustomerChatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		L002000000000001 /* Debug */ = {
+		'L002000000000001' = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,7 +291,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1", "$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -265,7 +303,7 @@
 			};
 			name = Debug;
 		};
-		L002000000000002 /* Release */ = {
+		'L002000000000002' = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -283,7 +321,7 @@
 			};
 			name = Release;
 		};
-		L002000000000003 /* Debug - Target */ = {
+		'L002000000000003' = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -303,7 +341,7 @@
 			};
 			name = Debug;
 		};
-		L002000000000004 /* Release - Target */ = {
+		'L002000000000004' = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -326,26 +364,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		H002000000000001 /* Build configuration list for PBXNativeTarget "Customer" */ = {
+		'H002000000000001' = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				L002000000000003 /* Debug */,
-				L002000000000004 /* Release */,
+				L002000000000003,
+				L002000000000004,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		H002000000000002 /* Build configuration list for PBXProject "Customer" */ = {
+		'H002000000000002' = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				L002000000000001 /* Debug */,
-				L002000000000002 /* Release */,
+				L002000000000001,
+				L002000000000002,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
-	rootObject = K002000000000001 /* Project object */;
+	rootObject = K002000000000001;
 }
