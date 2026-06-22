@@ -143,13 +143,13 @@ struct CustomerTrackingView: View {
             .navigationBarTitleDisplayMode(.inline)
             // Sheet untuk Chat & Call
             .sheet(isPresented: $viewModel.showChat) {
-                if let orderId = viewModel.trackingResult?.order.id {
+                if let orderId = viewModel.trackingResult?.id {
                     CustomerChatView(orderId: orderId)
                         .presentationDetents([.medium, .large])
                 }
             }
             .fullScreenCover(isPresented: $viewModel.showCall) {
-                if let orderId = viewModel.trackingResult?.order.id {
+                if let orderId = viewModel.trackingResult?.id {
                     CustomerCallView(orderId: orderId)
                 }
             }

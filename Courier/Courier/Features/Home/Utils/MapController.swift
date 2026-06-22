@@ -1,55 +1,36 @@
 import Foundation
-import TomTomSDKMapDisplay
-import TomTomSDKRoute
-import TomTomSDKRouting
+// import TomTomSDKMapDisplay
+// import TomTomSDKRoute
+// import TomTomSDKRouting
 import SwiftUI
+import MapKit
 
 // This represents a bridge/controller for TomTom SDK maps
 class MapController: ObservableObject {
     private let apiKey = "YOUR_TOMTOM_API_KEY" // Placeholder
     
     // We store the reference to the MapView to interact with it programmatically
-    var mapView: MapView?
+    // var mapView: MapView? // Mocked out
     
     init() {
-        MapsDisplayService.apiKey = apiKey
-        RoutingService.apiKey = apiKey
+        // MapsDisplayService.apiKey = apiKey
+        // RoutingService.apiKey = apiKey
     }
     
     func setupMap(in container: UIView) {
-        let mapView = MapView(frame: container.bounds)
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        container.addSubview(mapView)
-        self.mapView = mapView
-        
-        mapView.delegate = self
-        
-        // Add a dummy marker for courier location
-        let courierLocation = CLLocationCoordinate2D(latitude: -6.200000, longitude: 106.816666) // Jakarta example
-        addMarker(at: courierLocation)
-        centerMap(on: courierLocation)
+        // Mocked out
     }
     
     func addMarker(at coordinate: CLLocationCoordinate2D) {
-        let markerOptions = MarkerOptions(coordinate: coordinate)
-        _ = try? mapView?.markerManager.addMarker(options: markerOptions)
+        // Mocked out
     }
     
     func centerMap(on coordinate: CLLocationCoordinate2D) {
-        let cameraUpdate = CameraUpdate(position: coordinate, zoom: 14.0)
-        mapView?.camera.move(cameraUpdate: cameraUpdate)
+        // Mocked out
     }
     
     func drawRoute(from origin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {
         // Placeholder for routing API integration
-        // In real app, we use TomTom Routing API to fetch Route object
-        // and then map.routeManager.addRoute()
-    }
-}
-
-extension MapController: MapDelegate {
-    nonisolated func map(_ map: TomTomSDKMapDisplay.Map, didChangeCamera state: CameraState) {
-        // Handle map camera changes if needed
     }
 }
 
