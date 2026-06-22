@@ -42,12 +42,13 @@ jobs:
         run: xcodebuild -version
 
       - name: Install Dependencies (xcpretty & xcodeproj)
-        run: |
-          gem install xcpretty --no-document
-          gem install xcodeproj --no-document
+        run: gem install xcpretty xcodeproj
 
       - name: Sync Xcode Project Files
         run: ruby sync_pbx.rb
+
+      - name: Setup Swift Package Dependencies
+        run: ruby setup_spm.rb
 
       - name: Build for Simulator (Debug)
         run: |
