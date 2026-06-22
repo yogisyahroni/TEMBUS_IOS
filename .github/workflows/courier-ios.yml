@@ -69,7 +69,7 @@ jobs:
     name: Deploy to TestFlight (Courier)
     runs-on: macos-14
     needs: build-and-test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: false # Temporarily disabled during active development: github.event_name == 'push' && github.ref == 'refs/heads/main'
     timeout-minutes: 60
     environment: production
 
