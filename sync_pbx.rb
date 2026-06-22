@@ -13,16 +13,22 @@ def sync_project(project_path, target_name)
 
   source_dir = Pathname.new(project_path).dirname.join(target_name)
   
-  # Find all physical Swift files
-  physical_files = Dir.glob("#{source_dir}/**/*.swift")
+  # Find all physical Swift files (absolute paths)
+  physical_files = Dir.glob("#{source_dir}/**/*.swift").map { |f| File.expand_path(f) }
   
-  # Get all files currently in the compile phase
+  # Get all files currently in the compile phase (absolute paths)
   compile_phase = target.source_build_phase
-  existing_paths = compile_phase.files.filter_map { |file| file.file_ref&.real_path&.to_s }
+  existing_paths = compile_phase.files.filter_map { |file| 
+    path = file.file_ref&.real_path&.to_s
+    path ? File.expand_path(path) : nil
+  }
   
-  physical_files.each do |file_path|
-    unless existing_paths.include?(file_path)
+  physical_files.each do |absolute_path|
+    unless existing_paths.include?(absolute_path)
+      # We need relative path to add to group
+      file_path = Pathname.new(absolute_path).relative_path_from(Pathname.new(Dir.pwd)).to_s
       puts "Adding missing file: #{file_path}"
+      
       # Add file to the project relative to the main group
       group_path = Pathname.new(file_path).dirname.relative_path_from(source_dir).to_s
       
