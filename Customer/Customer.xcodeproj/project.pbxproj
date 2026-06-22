@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A002000000000001 /* CustomerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000001 /* CustomerApp.swift */; };
+		A002000000000002 /* CustomerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000002 /* CustomerRootView.swift */; };
+		A002000000000003 /* CustomerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000003 /* CustomerMainTabView.swift */; };
+		A002000000000004 /* CustomerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000004 /* CustomerModels.swift */; };
+		A002000000000005 /* CustomerTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000005 /* CustomerTokenStorage.swift */; };
+		A002000000000006 /* CustomerAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000006 /* CustomerAuthViewModel.swift */; };
+		A002000000000007 /* CustomerLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000007 /* CustomerLoginView.swift */; };
+		A002000000000008 /* CustomerOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000008 /* CustomerOrderView.swift */; };
+		A002000000000009 /* CustomerOrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002000000000009 /* CustomerOrderHistoryView.swift */; };
+		A00200000000000A /* CustomerTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000A /* CustomerTrackingView.swift */; };
+		A00200000000000B /* CustomerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00200000000000B /* CustomerProfileView.swift */; };
+		A00200000000000C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00200000000000C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B002000000000001 /* CustomerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerApp.swift; sourceTree = "<group>"; };
+		B002000000000002 /* CustomerRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRootView.swift; sourceTree = "<group>"; };
+		B002000000000003 /* CustomerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMainTabView.swift; sourceTree = "<group>"; };
+		B002000000000004 /* CustomerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModels.swift; sourceTree = "<group>"; };
+		B002000000000005 /* CustomerTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTokenStorage.swift; sourceTree = "<group>"; };
+		B002000000000006 /* CustomerAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAuthViewModel.swift; sourceTree = "<group>"; };
+		B002000000000007 /* CustomerLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLoginView.swift; sourceTree = "<group>"; };
+		B002000000000008 /* CustomerOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderView.swift; sourceTree = "<group>"; };
+		B002000000000009 /* CustomerOrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrderHistoryView.swift; sourceTree = "<group>"; };
+		B00200000000000A /* CustomerTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTrackingView.swift; sourceTree = "<group>"; };
+		B00200000000000B /* CustomerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileView.swift; sourceTree = "<group>"; };
+		B00200000000000C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B00200000000000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C002000000000001 /* Customer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D002000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E002000000000001 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				E002000000000002 /* App */,
+				E002000000000003 /* Core */,
+				E002000000000004 /* Features */,
+				E002000000000005 /* Resources */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		E002000000000002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B002000000000001 /* CustomerApp.swift */,
+				B002000000000002 /* CustomerRootView.swift */,
+				B002000000000003 /* CustomerMainTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E002000000000003 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E002000000000006 /* Network */,
+				E002000000000007 /* Storage */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E002000000000006 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B002000000000004 /* CustomerModels.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E002000000000007 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				B002000000000005 /* CustomerTokenStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E002000000000004 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E002000000000008 /* Auth */,
+				E002000000000009 /* Orders */,
+				E00200000000000A /* Tracking */,
+				E00200000000000B /* Profile */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E002000000000008 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B002000000000006 /* CustomerAuthViewModel.swift */,
+				B002000000000007 /* CustomerLoginView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E002000000000009 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				B002000000000008 /* CustomerOrderView.swift */,
+				B002000000000009 /* CustomerOrderHistoryView.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		E00200000000000A /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				B00200000000000A /* CustomerTrackingView.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		E00200000000000B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B00200000000000B /* CustomerProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E002000000000005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B00200000000000C /* Assets.xcassets */,
+				B00200000000000D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F002000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C002000000000001 /* Customer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F002000000000000 = {
+			isa = PBXGroup;
+			children = (
+				E002000000000001 /* Customer */,
+				F002000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		G002000000000001 /* Customer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H002000000000001 /* Build configuration list for PBXNativeTarget "Customer" */;
+			buildPhases = (
+				I002000000000001 /* Sources */,
+				D002000000000001 /* Frameworks */,
+				J002000000000001 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = Customer;
+			productName = Customer;
+			productReference = C002000000000001 /* Customer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		K002000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					G002000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = H002000000000002 /* Build configuration list for PBXProject "Customer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = F002000000000000;
+			productRefGroup = F002000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				G002000000000001 /* Customer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		J002000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00200000000000C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		I002000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A002000000000001 /* CustomerApp.swift in Sources */,
+				A002000000000002 /* CustomerRootView.swift in Sources */,
+				A002000000000003 /* CustomerMainTabView.swift in Sources */,
+				A002000000000004 /* CustomerModels.swift in Sources */,
+				A002000000000005 /* CustomerTokenStorage.swift in Sources */,
+				A002000000000006 /* CustomerAuthViewModel.swift in Sources */,
+				A002000000000007 /* CustomerLoginView.swift in Sources */,
+				A002000000000008 /* CustomerOrderView.swift in Sources */,
+				A002000000000009 /* CustomerOrderHistoryView.swift in Sources */,
+				A00200000000000A /* CustomerTrackingView.swift in Sources */,
+				A00200000000000B /* CustomerProfileView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		L002000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1", "$(inherited)");
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		L002000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		L002000000000003 /* Debug - Target */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Customer/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.tembus.customer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		L002000000000004 /* Release - Target */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Customer/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.tembus.customer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		H002000000000001 /* Build configuration list for PBXNativeTarget "Customer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				L002000000000003 /* Debug */,
+				L002000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		H002000000000002 /* Build configuration list for PBXProject "Customer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				L002000000000001 /* Debug */,
+				L002000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = K002000000000001 /* Project object */;
+}
