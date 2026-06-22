@@ -60,7 +60,7 @@ add_spm_dependency(
   'Courier/Courier.xcodeproj',
   'Courier',
   'https://github.com/tomtom-international/tomtom-sdk-spm-core.git',
-  { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '0.73.0' },
+  { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '0.70.0' },
   ['TomTomSDKMapDisplay']
 )
 
