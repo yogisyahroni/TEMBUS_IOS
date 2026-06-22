@@ -170,7 +170,7 @@ struct TrackingAnnotation: Identifiable {
 // ViewModel & Socket Mock Logic
 @MainActor
 class CustomerTrackingViewModel: ObservableObject {
-    @Published var trackingResult: TrackingInfo?
+    @Published var trackingResult: CustomerTrackingInfo?
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
     
@@ -206,7 +206,7 @@ class CustomerTrackingViewModel: ObservableObject {
             
             let order = response.order
             
-            self.trackingResult = TrackingInfo(
+            self.trackingResult = CustomerTrackingInfo(
                 id: order.id,
                 status: order.status,
                 courierName: order.courier_name,
@@ -252,7 +252,7 @@ class CustomerTrackingViewModel: ObservableObject {
 }
 
 // Extracted existing TrackingInfo
-struct TrackingInfo: Identifiable {
+struct CustomerTrackingInfo: Identifiable {
     let id: String
     let status: String
     let courierName: String?

@@ -18,7 +18,7 @@ class CustomerChatViewModel: ObservableObject {
                 
                 let msg = ChatMessage(
                     text: payload.text,
-                    isFromCurrentUser: payload.sender_id == CustomerTokenStorage.shared.customerId, // Need customerId
+                    isFromCurrentUser: payload.sender_id == "mock_customer_id", // Temporarily mocked
                     timestamp: payload.created_at
                 )
                 
@@ -49,7 +49,7 @@ class CustomerChatViewModel: ObservableObject {
                 let _: BaseResponse<ChatMessagePayload> = try await NetworkManager.shared.request(
                     APIEndpoint.sendChat(orderId: orderId),
                     method: "POST",
-                    body: bodyDict
+                    body: bodyData // Send the encoded Data directly instead of Dictionary
                 )
             } catch {
                 print("Failed to send message: \(error)")
@@ -71,7 +71,7 @@ class CustomerChatViewModel: ObservableObject {
                 self.messages = chats.map { chat in
                     ChatMessage(
                         text: chat.text,
-                        isFromCurrentUser: chat.sender_id == CustomerTokenStorage.shared.customerId,
+                        isFromCurrentUser: chat.sender_id == "mock_customer_id", // Temporarily mocked
                         timestamp: chat.created_at
                     )
                 }
