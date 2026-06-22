@@ -51,7 +51,9 @@ jobs:
         run: ruby setup_spm.rb
 
       - name: Download iOS Platform
-        run: xcodebuild -downloadPlatform iOS
+        run: |
+          xcrun simctl list > /dev/null
+          xcodebuild -downloadPlatform iOS
 
       - name: Build for Simulator (Debug)
         run: |
