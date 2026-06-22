@@ -50,6 +50,9 @@ jobs:
       - name: Setup Swift Package Dependencies
         run: ruby setup_spm.rb
 
+      - name: Download iOS Platform
+        run: xcodebuild -downloadPlatform iOS
+
       - name: Build for Simulator (Debug)
         run: |
           set -o pipefail
