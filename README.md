@@ -123,5 +123,25 @@ Aplikasi Courier menggunakan *3rd-party SDK* berikut yang harus di-*resolve* via
 
 ---
 
-## 3. Menjalankan Aplikasi
 4. Klik **Add Package** dan pastikan semua library terpasang di *Target Courier*.
+
+---
+
+## 3. Cara Menjalankan Emulator (Simulator) di Mac
+
+> ⚠️ **Catatan Khusus Pengguna Mac Apple Silicon (M1/M2/M3)**
+> Aplikasi **Courier** menggunakan dependensi *Google MLKit FaceDetection* yang pada versi ini belum memiliki arsitektur `arm64` untuk Simulator. Oleh karena itu, jika Anda menggunakan Mac dengan prosesor Apple Silicon, Anda **WAJIB** menjalankan Simulator dalam mode **Rosetta (x86_64)**. Jika tidak, Anda akan menemui error kompilasi / *linker* (contoh: `Undefined symbols for architecture arm64`).
+
+### Tutorial Setup Emulator:
+1. Pastikan Anda menggunakan **Xcode 15.4** atau yang lebih baru.
+2. Deployment target aplikasi ini adalah **iOS 17.0**. Pastikan Anda sudah mengunduh runtime iOS 17.0 di Xcode:
+   - Pergi ke menu bar atas: **Xcode > Settings > Platforms**
+   - Klik tombol **+** dan unduh **iOS 17.0 Simulator**.
+3. Buka *project* `Courier/Courier.xcodeproj` atau `Customer/Customer.xcodeproj`.
+4. Di menu bar atas, klik **Product > Destination > Destination Architectures**.
+5. Pilih **Show Rosetta Destinations**.
+6. Sekarang, pada daftar pilihan perangkat Simulator (di bar atas, sebelah kanan tombol *Play/Run*), akan muncul nama simulator dengan tambahan kata "(Rosetta)". Contoh: **iPhone 15 Pro (Rosetta)**.
+7. Pilih perangkat **(Rosetta)** tersebut sebagai target build Anda.
+8. Tekan tombol **Play** atau gunakan *shortcut* **⌘ + R** untuk menjalankan aplikasi.
+
+*(Catatan: Langkah Rosetta ini hanya diwajibkan untuk Simulator di Mac Apple Silicon. Jika Anda meng-install aplikasi ini langsung ke perangkat iPhone asli (Real Device), aplikasi akan berjalan normal di arsitektur `arm64` tanpa memerlukan trik ini.)*
