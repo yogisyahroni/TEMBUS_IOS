@@ -53,15 +53,13 @@ jobs:
 
       - name: Build for Simulator (Debug)
         run: |
-          set -o pipefail
           xcodebuild build \
             -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.APP_SCHEME }}" \
             -sdk iphonesimulator \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            2>&1 | xcpretty --color
+            CODE_SIGNING_REQUIRED=NO
 
   # ──────────────────────────────────────────────
   # Phase 2: Archive & Upload to TestFlight
@@ -123,15 +121,13 @@ jobs:
 
       - name: Archive
         run: |
-          set -o pipefail
           xcodebuild archive \
             -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.APP_SCHEME }}" \
             -configuration Release \
             -archivePath $RUNNER_TEMP/Customer.xcarchive \
             CODE_SIGN_STYLE=Manual \
-            DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}" \
-            2>&1 | xcpretty --color
+            DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}"
 
       - name: Write ExportOptions.plist
         run: |
@@ -159,12 +155,10 @@ jobs:
 
       - name: Export IPA
         run: |
-          set -o pipefail
           xcodebuild -exportArchive \
             -archivePath $RUNNER_TEMP/Customer.xcarchive \
             -exportOptionsPlist $RUNNER_TEMP/ExportOptions.plist \
-            -exportPath $RUNNER_TEMP/export \
-            2>&1 | xcpretty --color
+            -exportPath $RUNNER_TEMP/export
 
       - name: Upload to TestFlight
         env:
