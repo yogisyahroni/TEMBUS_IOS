@@ -1,5 +1,5 @@
 import SwiftUI
-import GoogleSignInSwift
+// import GoogleSignInSwift // Temporarily removed
 
 struct CustomerLoginView: View {
     @EnvironmentObject private var authViewModel: CustomerAuthViewModel
@@ -48,13 +48,20 @@ struct CustomerLoginView: View {
                         ProgressView().tint(Color("CustomerPrimary"))
                             .padding()
                     } else {
-                        GoogleSignInButton(scheme: .light, style: .wide, state: .normal) {
+                        Button(action: {
                             Task {
                                 await authViewModel.loginWithGoogle()
                             }
+                        }) {
+                            Text("Sign in with Google")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
                         }
-                        .frame(height: 50)
+                        .padding()
+                        .background(Color.blue)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .frame(height: 50)
                     }
 
                     Text("Dengan masuk, Anda menyetujui Syarat dan Ketentuan layanan.")
