@@ -50,6 +50,21 @@ jobs:
       - name: Setup Swift Package Dependencies
         run: ruby setup_spm.rb
 
+      - name: Clean Invalid SPM Products
+        run: |
+          cat << 'EOF' > clean_pbx.rb
+          require 'xcodeproj'
+          project = Xcodeproj::Project.open('Courier/Courier.xcodeproj')
+          target = project.targets.find { |t| t.name == 'Courier' }
+          if target
+            target.package_product_dependencies.delete_if { |dep| dep.product_name == 'MLKitVision' }
+            target.frameworks_build_phase.files.delete_if { |f| f.product_ref && f.product_ref.respond_to?(:product_name) && f.product_ref.product_name == 'MLKitVision' }
+            project.save
+            puts "Cleaned MLKitVision from project.pbxproj"
+          end
+          EOF
+          ruby clean_pbx.rb
+
 
       - name: Resolve Swift Package Dependencies
         run: |
