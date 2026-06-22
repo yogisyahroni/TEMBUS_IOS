@@ -50,6 +50,10 @@ jobs:
       - name: Setup Swift Package Dependencies
         run: ruby setup_spm.rb
 
+      - name: Resolve Swift Package Dependencies
+        run: |
+          xcodebuild -resolvePackageDependencies -project Courier/Courier.xcodeproj -scheme Courier
+
       - name: Build for Simulator (Debug)
         run: |
           set -o pipefail
@@ -58,8 +62,7 @@ jobs:
             -scheme "${{ env.APP_SCHEME }}" \
             -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" \
             -configuration Debug \
-            CODE_SIGNING_ALLOWED=NO \
-            2>&1 | xcpretty --color
+            CODE_SIGNING_ALLOWED=NO
 
   # ──────────────────────────────────────────────
   # Phase 2: Archive & Upload to TestFlight
