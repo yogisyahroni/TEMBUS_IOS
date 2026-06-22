@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  XCODE_VERSION: '16.1'
+  XCODE_VERSION: '15.4'
   APP_SCHEME: 'Courier'
   PROJECT_PATH: 'Courier/Courier.xcodeproj'
   BUNDLE_ID: 'id.tembus.courier'
@@ -28,7 +28,7 @@ jobs:
   # ──────────────────────────────────────────────
   build-and-test:
     name: Build & Test (Courier)
-    runs-on: macos-15
+    runs-on: macos-14
     timeout-minutes: 30
 
     steps:
@@ -94,7 +94,7 @@ jobs:
   # ──────────────────────────────────────────────
   deploy-testflight:
     name: Deploy to TestFlight (Courier)
-    runs-on: macos-15
+    runs-on: macos-14
     needs: build-and-test
     if: false # Temporarily disabled during active development: github.event_name == 'push' && github.ref == 'refs/heads/main'
     timeout-minutes: 60
