@@ -72,5 +72,5 @@ add_spm_dependency(
   'Courier',
   'https://github.com/d-date/google-mlkit-swiftpm.git',
   { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '9.0.0' },
-  ['MLKitFaceDetection', 'MLKitVision']
+  ['MLKitFaceDetection']
 )
