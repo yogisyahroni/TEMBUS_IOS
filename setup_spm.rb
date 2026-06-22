@@ -60,8 +60,16 @@ add_spm_dependency(
   'Courier/Courier.xcodeproj',
   'Courier',
   'https://github.com/tomtom-international/tomtom-sdk-spm-core.git',
-  { 'kind' => 'exactVersion', 'version' => '0.40.0' }, # Wait, we can use upToNextMajor
-  ['TomTomSDKMapDisplay', 'TomTomSDKRoute', 'TomTomSDKRouting']
+  { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '0.73.0' },
+  ['TomTomSDKMapDisplay']
+)
+
+add_spm_dependency(
+  'Courier/Courier.xcodeproj',
+  'Courier',
+  'https://github.com/tomtom-international/tomtom-sdk-spm-navigation.git',
+  { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '0.73.0' },
+  ['TomTomSDKRoute', 'TomTomSDKRouting']
 )
 
 # MLKit is not officially on SPM, but let's try this community mirror if it exists, or just use CocoaPods for it.
@@ -70,6 +78,6 @@ add_spm_dependency(
   'Courier/Courier.xcodeproj',
   'Courier',
   'https://github.com/d-date/google-mlkit-swiftpm.git',
-  { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '3.2.0' },
+  { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '9.0.0' },
   ['MLKitFaceDetection', 'MLKitVision']
 )
