@@ -64,13 +64,6 @@ add_spm_dependency(
   ['TomTomSDKMapDisplay']
 )
 
-add_spm_dependency(
-  'Courier/Courier.xcodeproj',
-  'Courier',
-  'https://github.com/tomtom-international/tomtom-sdk-spm-navigation.git',
-  { 'kind' => 'upToNextMajorVersion', 'minimumVersion' => '0.73.0' },
-  ['TomTomSDKRoute', 'TomTomSDKRouting']
-)
 
 # MLKit is not officially on SPM, but let's try this community mirror if it exists, or just use CocoaPods for it.
 # Actually there's no official MLKit SPM. A common community mirror: https://github.com/d-date/google-mlkit-swiftpm

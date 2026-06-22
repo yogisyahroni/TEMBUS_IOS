@@ -1,7 +1,5 @@
 import Foundation
 import TomTomSDKMapDisplay
-import TomTomSDKRoute
-import TomTomSDKRouting
 import SwiftUI
 
 // This represents a bridge/controller for TomTom SDK maps
@@ -13,7 +11,6 @@ class MapController: ObservableObject {
     
     init() {
         MapsDisplayService.apiKey = apiKey
-        RoutingService.apiKey = apiKey
     }
     
     func setupMap(in container: UIView) {
