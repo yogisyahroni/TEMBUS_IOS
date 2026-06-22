@@ -1,6 +1,7 @@
 import Foundation
 import TomTomSDKMapDisplay
 import SwiftUI
+import CoreLocation
 
 // This represents a bridge/controller for TomTom SDK maps
 class MapController: ObservableObject {
@@ -19,7 +20,6 @@ class MapController: ObservableObject {
         container.addSubview(mapView)
         self.mapView = mapView
         
-        mapView.delegate = self
         
         // Add a dummy marker for courier location
         let courierLocation = CLLocationCoordinate2D(latitude: -6.200000, longitude: 106.816666) // Jakarta example
@@ -44,12 +44,7 @@ class MapController: ObservableObject {
     }
 }
 
-extension MapController: MapDelegate {
-    nonisolated func map(_ map: TomTomSDKMapDisplay.Map, didChangeCamera state: CameraState) {
-        // Handle map camera changes if needed
-    }
-}
-
+// Empty space for removed extension
 // SwiftUI Wrapper for TomTom MapView
 struct TomTomMapView: UIViewRepresentable {
     @ObservedObject var mapController: MapController

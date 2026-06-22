@@ -1,6 +1,7 @@
 import Foundation
 import MLKitFaceDetection
 import AVFoundation
+import UIKit
 
 protocol FaceAnalyzerDelegate: AnyObject {
     func faceAnalyzer(_ analyzer: FaceAnalyzer, didUpdateLiveness status: String, isVerified: Bool)

@@ -174,7 +174,7 @@ extension FaceLivenessViewModel: FaceAnalyzerDelegate {
 }
 
 // Custom View for rendering AVCaptureSession
-struct CameraPreviewView: UIViewRepresentable {
+private struct CameraPreviewView: UIViewRepresentable {
     class VideoPreviewView: UIView {
         override class var layerClass: AnyClass {
             AVCaptureVideoPreviewLayer.self

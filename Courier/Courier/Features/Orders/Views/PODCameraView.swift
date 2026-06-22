@@ -109,7 +109,7 @@ struct PODCameraView: View {
 }
 
 // MARK: - Camera Preview
-struct CameraPreviewView: UIViewRepresentable {
+private struct CameraPreviewView: UIViewRepresentable {
     let session: AVCaptureSession
     
     func makeUIView(context: Context) -> VideoPreviewView {
@@ -122,7 +122,7 @@ struct CameraPreviewView: UIViewRepresentable {
     func updateUIView(_ uiView: VideoPreviewView, context: Context) {}
 }
 
-class VideoPreviewView: UIView {
+private class VideoPreviewView: UIView {
     override class var layerClass: AnyClass {
         return AVCaptureVideoPreviewLayer.self
     }
