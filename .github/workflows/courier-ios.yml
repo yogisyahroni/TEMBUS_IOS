@@ -75,8 +75,7 @@ jobs:
             -sdk iphonesimulator \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            2>&1 | xcpretty --color
+            CODE_SIGNING_REQUIRED=NO
 
   # ──────────────────────────────────────────────
   # Phase 2: Archive & Upload to TestFlight
